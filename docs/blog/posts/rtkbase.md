@@ -6,6 +6,9 @@ date:
 draft: false
 categories: 
     - ArduPilot
+tags:
+    - GNSS
+    - docker
 authors:
   - khancyr
 ---

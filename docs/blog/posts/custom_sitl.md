@@ -1,16 +1,18 @@
 ---
 title: "Customizing SITL Multicopter Simulations: Tailoring Realism to Your Drone"
 date:
-  created: 2025-09-23
-  updated: 2025-09-23
+  created: 2023-08-25
+  updated: 2023-08-25
 draft: false
 categories: 
     - ArduPilot
+tags:
+    - SITL
 authors:
   - khancyr
 ---
 
-![test_ardupilot|500x500](upload://iSg6IKM6AOIl8YLeYwn6Ly144na.jpeg)
+![test_ardupilot|500x500](https://discuss.ardupilot.org/uploads/default/original/3X/8/4/84495150cdfafe95282cb3727fbddee0e5ca091c.jpeg)
 
 
 

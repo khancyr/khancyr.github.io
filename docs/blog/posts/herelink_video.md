@@ -6,6 +6,8 @@ date:
 draft: false
 categories: 
     - ArduPilot
+tags:
+    - video
 authors:
   - khancyr
 ---

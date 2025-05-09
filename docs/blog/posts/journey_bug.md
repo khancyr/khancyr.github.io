@@ -6,6 +6,8 @@ date:
 draft: false
 categories: 
     - ArduPilot
+tags:
+    - GNSS
 authors:
   - khancyr
 ---

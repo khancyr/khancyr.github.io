@@ -3,34 +3,28 @@ site_url: https://khancyr.github.io
 theme:
   language: en
   name: material
+  favicon: images/Hivebotics-blue.svg
+  logo: images/favicon-32x32.png
+
   features:
     - navigation.instant
+    - navigation.indexes
     - search.suggest
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default 
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
+    scheme: slate
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - js/goatcounter.js
 
 plugins:
-  - blog
+  - blog:
+      blog_toc: true
+      archive_date_format: MMMM yyyy
   - search
-  - social
+  - social:
+      cards_layout_options:
+        background_color: "#2d4f6c"
   - tags
   - rss:
       enabled: !ENV [CI, false]

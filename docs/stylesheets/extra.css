@@ -1,0 +1,15 @@
+/* Override MkDocs primary colors if needed 
+    --md-primary-fg-color: #ebaf4c;
+    --md-default-bg-color: #2d4f6c;*/
+:root > * {
+    --md-primary-fg-color:               #ebaf4c;
+    --md-primary-fg-color--light:        #ebaf4c;
+    --md-primary-fg-color--dark:         #ebaf4c;
+    --md-primary-bg-color:               #2d4f6c;
+    --md-primary-bg-color--light:        #2d4f6c;
+  
+    --md-accent-fg-color:                #ebaf4c;
+    --md-accent-fg-color--transparent:   #ebaf4c;
+
+
+}

@@ -1,11 +1,14 @@
 ---
 title: "Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems"
 date:
-  created: 2021-01-21
-  updated: 2021-01-21
+  created: 2024-01-21
+  updated: 2024-01-21
 draft: false
 categories: 
     - ArduPilot
+    - Various
+tags:
+    - Linux
 authors:
   - khancyr
 ---
