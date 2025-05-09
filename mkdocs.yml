@@ -1,0 +1,36 @@
+site_name: Pierre Kancir personal blog
+site_url: https://khancyr.github.io
+theme:
+  language: en
+  name: material
+  features:
+    - navigation.instant
+    - search.suggest
+plugins:
+  - blog
+  - search
+  - social
+  - tags
+  - rss:
+      enabled: !ENV [CI, false]
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+      categories:
+        - categories
+        - tags 
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      name: Pierre on LinkedIn
+      link: https://www.linkedin.com/in/pierre-kancir/
+    - icon: fontawesome/brands/github
+      name: Pierre on Github
+      link: https://github.com/khancyr
+    - icon: fontawesome/solid/rss
+      name: Pierre's blog on RSS
+      link: https://khancyr.github.io/feed_rss_created.xml
+
+copyright: Copyright &copy; 2016 - 2025 Pierre Kancir

@@ -16,3 +16,14 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+.venv/
+.vscode/
+.idea/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+.site/
+.cache/
