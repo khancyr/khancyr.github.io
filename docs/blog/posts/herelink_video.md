@@ -22,6 +22,7 @@ Let’s look at different usages
 
 *(This article isn't to shame or attack any manufacturer but to start some investigation on one issue and find a solution)*
 
+<!-- more -->
 # What is working ?
 
 The only player that has comprehensible documentation on this is CubePilot with the [Herelink](https://docs.cubepilot.org/user-guides/herelink/herelink-user-guides/share-video-stream).
