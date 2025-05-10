@@ -45,6 +45,9 @@ extra:
     - icon: fontawesome/brands/github
       name: Pierre on Github
       link: https://github.com/khancyr
+    - icon: fontawesome/brands/youtube
+      name: Pierre on Youtube
+      link: https://www.youtube.com/@MrKhancyr
     - icon: fontawesome/solid/rss
       name: Pierre's blog on RSS
       link: https://khancyr.github.io/feed_rss_created.xml
