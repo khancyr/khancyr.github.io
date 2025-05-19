@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Pierre Kancir personal blog
 site_url: https://khancyr.github.io
 theme:
@@ -15,6 +16,12 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - js/goatcounter.js
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - blog:

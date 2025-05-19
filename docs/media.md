@@ -5,7 +5,7 @@ title: "Media"
 ___
 ## Talks :fontawesome-solid-person-chalkboard:
  
- * [FOSDEM 2025](https://fosdem.org) _ArduPilot : Trusted, Versatile and FOSS autopilot for all and everything_ [:fontawesome-solid-film:](https://fosdem.org/2025/schedule/event/fosdem-2025-5476-ardupilot-trusted-versatile-and-foss-autopilot-for-all-and-everything/)
+ * [FOSDEM 2025](https://fosdem.org) _ArduPilot: Trusted, Versatile and FOSS autopilot for all and everything_ [:fontawesome-solid-film:](https://fosdem.org/2025/schedule/event/fosdem-2025-5476-ardupilot-trusted-versatile-and-foss-autopilot-for-all-and-everything/)
  * [ROSConFr 2024](https://roscon.fr/) _ROS est lent ? Nettoyez votre système !_ [:fontawesome-solid-film:](https://www.youtube.com/watch?v=ukr9SicTU78)
  * [ROSConFr 2024](https://roscon.fr/) _ArduPilot et ROS 2 : état en 2024_ [:fontawesome-solid-film:](https://www.youtube.com/watch?v=vu82jOx696g)
  * [2RM 2024](https://wiki.2rm.cnrs.fr/EcoleTechno2024) _Simulation et utilisation d’un véhicule avec double autopilote ArduPilot : Redondance ou Multiconfiguration_
@@ -15,5 +15,5 @@ ___
 
 ## Interviews and Podcasts :fontawesome-solid-microphone:
 
- * [ROS Aerial WG](https://discourse.ros.org/t/aerial-robotics-meeting-march-20th-2025/42495) _FROST APE : Flying ROS The ArduPilot Experience!_ [:fontawesome-solid-film:](https://vimeo.com/1068300401)
+ * [ROS Aerial WG](https://discourse.ros.org/t/aerial-robotics-meeting-march-20th-2025/42495) _FROST APE: Flying ROS The ArduPilot Experience!_ [:fontawesome-solid-film:](https://vimeo.com/1068300401)
 
