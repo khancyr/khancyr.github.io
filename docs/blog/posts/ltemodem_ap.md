@@ -40,11 +40,14 @@ Pretty cool, right? This opens the door to **theoretical unlimited-range communi
 
 ## Some Words of Caution
 Of course, there are caveats:
-* Performance: These modems aren’t stellar when it comes to signal strength or bandwidth.
-* Data Limits: Communication is via AT commands—great for MAVLink, but don’t expect to stream video or send images.
-* Latency: You won't have control over network latency. This makes LTE connections suitable for ground vehicles or non-critical mission updates, not for FPV or latency-sensitive control.
 
-⚠️ **Important**: Many countries restrict or prohibit LTE-based drone control. Always check your local regulations before flying with cellular links!
+* **Performance**: These modems aren’t stellar when it comes to signal strength or bandwidth.
+* **Data** Limits: Communication is via AT commands—great for MAVLink, but don’t expect to stream video or send images.
+* **Latency**: You won't have control over network latency. This makes LTE connections suitable for ground vehicles or non-critical mission updates, not for FPV or latency-sensitive control.
+
+!!! warning
+
+    ⚠️ **Important**: Many countries restrict or prohibit LTE-based drone control. Always check your local regulations before flying with cellular links!
 
 ## Future
 These enhancements pave the way for new ArduPilot applications, and we’re excited to see how the community puts them to use. If you have a cool demo using these LTE modems, share it—we’d love to see it in action!
