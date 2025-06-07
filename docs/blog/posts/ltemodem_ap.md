@@ -7,7 +7,7 @@ draft: false
 categories:
     - ArduPilot
     - IoT
-
+image: images/putin_lte.jpg
 authors:
   - khancyr
 ---
