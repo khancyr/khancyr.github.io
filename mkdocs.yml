@@ -32,8 +32,6 @@ plugins:
       archive_date_format: MMMM yyyy
   - search
   - social:
-      cards_include:
-            - blog/*
       cards_layout_options:
         background_color: "#2d4f6c"
   - tags
