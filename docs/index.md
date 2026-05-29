@@ -2,10 +2,9 @@
 title: "About"
 ---
 
-**Pierre Kancir, PhD**
+## Pierre Kancir, PhD
+
 ___
-
-
 
 Hi, I am Pierre! I am an independent roboticist with a background in aerial robotics and embedded systems.
 As a robotics engineer, I have worked on many mobile robotics projects, both terrestrial and aerial, for small and medium sized companies.
