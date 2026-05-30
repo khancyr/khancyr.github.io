@@ -1,0 +1,1909 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://khancyr.github.io/blog/page/3/">
+      
+      
+        <link rel="prev" href="../../../tags/">
+      
+      
+        <link rel="next" href="../../category/ardupilot/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../images/Hivebotics-blue.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Blog - Pierre Kancir personal blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog - Pierre Kancir personal blog" />
+<meta property="og:image" content="https://khancyr.github.io/assets/images/social/blog/page/3/index.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://khancyr.github.io/blog/page/3/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Blog - Pierre Kancir personal blog" />
+<meta property="twitter:image" content="https://khancyr.github.io/assets/images/social/blog/page/3/index.png" />
+</head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Pierre Kancir personal blog" class="md-header__button md-logo" aria-label="Pierre Kancir personal blog" data-md-component="logo">
+      
+  <img src="../../../images/favicon-32x32.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pierre Kancir personal blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Pierre Kancir personal blog" class="md-nav__button md-logo" aria-label="Pierre Kancir personal blog" data-md-component="logo">
+      
+  <img src="../../../images/favicon-32x32.png" alt="logo">
+
+    </a>
+    Pierre Kancir personal blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="../../" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-coverage-at-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Coverage at ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtkbase-with-partner-ardusimple-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RTKBase with Partner ArduSimple Kit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-sitl-on-homecloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi SITL on homecloud
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-at-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI at ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-french-drone-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source French Drone Identification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-2004-support-on-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntu 20.04 support on ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-completion-for-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell completion for Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-systems-patrol-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi systems patrol simulations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    June 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    June 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    August 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    September 2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    July 2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    May 2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/ardupilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArduPilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/iot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/ros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/various/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Various
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-coverage-at-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Coverage at ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtkbase-with-partner-ardusimple-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RTKBase with Partner ArduSimple Kit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-sitl-on-homecloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi SITL on homecloud
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-at-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI at ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-french-drone-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source French Drone Identification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-2004-support-on-ardupilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntu 20.04 support on ArduPilot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-completion-for-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell completion for Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-systems-patrol-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi systems patrol simulations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="blog">Blog</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2021-06-07 00:00:00+00:00">June 7, 2021</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="code-coverage-at-ardupilot"><a class="toclink" href="../../2021/06/07/ardupilot-code-coverage/">Code Coverage at ArduPilot</a></h2>
+<p><img alt="" src="https://www.commitstrip.com/wp-content/uploads/2017/02/Strip-Ou-sont-les-tests-unitaires-english650-final.jpg" />
+<em>Credit to CommitStrip : https://www.commitstrip.com/en/2017/02/08/where-are-the-tests/?setLocale=1</em></p>
+<p>You may have seen in the latest weeks that the devs were speaking about Coverage. What is that ?</p>
+<p>Coverage or code coverage is a technique to gather statistics on which line and function on the code we actually test !<br />
+You may be aware that at ArduPilot we have <a href="https://ardupilot.org/dev/docs/the-ardupilot-autotest-framework.html">an automated test suite</a> that runs numerous tests each time someone proposes a contribution. But an important question remains : Does the test suite cover the code change ? That is the whole point of code coverage analysis that gives us lines by lines, and functions per function, which ones are called and which ones aren't. The more your tests cover line of code, the less chance you have to have bugs. That is why certification in Aeronautics or in the car industry is long and costly since reaching 100% coverage is close to mandatory and hard to achieve ... resulting in the unfortunate scandals, these two industries have faced in the past few years.</p>
+<p>That is why in the latest weeks, Peter Barker and myself push some effort on getting better support on code coverage. We are now getting a simpler script to run the coverage gathering and we will get automated statistics updated every week.</p>
+<p>The most important question that you are now asking is : how much code coverage do we have ?
+On 2021-05-20, we were on the whole project at:</p>
+<table>
+<thead>
+<tr>
+<th>Lines</th>
+<th>52.2 %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Functions</td>
+<td>61.9 %</td>
+</tr>
+</tbody>
+</table>
+<p>We can also details the statistics per vehicles :</p>
+<table>
+<thead>
+<tr>
+<th>Copter</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines</td>
+<td>64.1 %</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>80.8 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Plane</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines</td>
+<td>61.5 %</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>80.5 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Rover</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines</td>
+<td>57.7 %</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>78.7 %</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sub</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines</td>
+<td>33.9 %</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>53.4 %</td>
+</tr>
+</tbody>
+</table>
+<p>That isn't that bad but not the best either. We can also see that our testing is unequal among the vehicles, the Sub being the less tested vehicle.
+You can have access to our latest report on our server at https://firmware.ardupilot.org/coverage/</p>
+<h3 id="how-do-we-generate-this"><a class="toclink" href="../../2021/06/07/ardupilot-code-coverage/#how-do-we-generate-this">How do we generate this</a></h3>
+<p>To gather the code coverage statistics, we are running all our tests ! That means :
+- Unit tests : Those are simple tests on functions to test that one input gives the expected output. We don't have much Unit tests, but most of them are in AP_Math library, to test our maths functions https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_Math/tests
+- Functional tests : Those are autotest. We are running simulations test cases with a fully simulated vehicle and test whatever we want : Mavlink message input, sensor failure, autotune, RC input, etc. We got around 300 autotests running currently and the number is growing.</p>
+<p>There is now a script <a href="https://github.com/ArduPilot/ardupilot/blob/master/Tools/scripts/run_coverage.py"><code>run_coverage.py</code></a> in <code>Tools/scrips/</code> that allow you to do the coverage testing. You can use it like that :
+- First you need to set up your build configuration and build the right binaries. We need to build the SITL binaries before running the coverage tools ! And those need to be built in <code>coverage mode</code>, obviously, and <code>debug mode</code>, to minimize the compile optimisation. The invocation is <code>Tools/scripts/run_coverage.py -i</code>,  where <code>-i</code> stands for init. It will then check that you got the right binaries with the right compilation flags. If that isn't the case, it will build them. And finally, it will initialize the code coverage handling with the binaries you built.</p>
+<p>You can now launch as much testing as you want, running SITL or making some corrections on the code. Each time you will launch the tests, the coverage handling will run. For example, you can run the Rangefinder drivers testing with : <code>Tools/autotest/autotest.py test.Copter.RangeFinderDrivers</code></p>
+<p>To display the coverage, you need to ask for the statistics
+- <code>Tools/scripts/run_coverage.py -u</code> will do it for you. At the end of the script will ask you to open the <code>index.html</code> that will be in the <code>reports</code> directory. This will open the same kind of web page with the coverage statistics than on our server.</p>
+<p>To run every tests,
+- <code>Tools/scripts/run_coverage.py -f</code>, where <code>-f</code> is for full, will do the building and run all tests. This is really long : around 2h30min to launch every test. That one current limitation of our autotest suite : we don't do parallel testing yet.</p>
+<h3 id="why-does-code-coverage-matter"><a class="toclink" href="../../2021/06/07/ardupilot-code-coverage/#why-does-code-coverage-matter">Why does code coverage matter</a></h3>
+<p>Doing code coverage analysis when writing tests is a good exercise to understand the code and check that we are truly testing what we want.
+It is something to write tests, but it is better if the tests are right ! During the writing of the code coverage script, we find numerous bugs into the code base. Here are some examples :
+- <code>Autotest.py</code> wasn't passing all arguments correctly : https://github.com/ArduPilot/ardupilot/pull/17554
+- On AP_Rangefinder, we use a virtual function in the base class constructor. This is an issue as the compiler doesn't know yet about the derived class. It led to some driver functions not being called on initialization. Hopefully, those aren't critical. https://github.com/ArduPilot/ardupilot/pull/17660
+- More testing for AP_Math to have the library closer to 100% code coverage with only unit tests : https://github.com/ArduPilot/ardupilot/pull/17609 .</p>
+<h3 id="what-is-next"><a class="toclink" href="../../2021/06/07/ardupilot-code-coverage/#what-is-next">What is next</a></h3>
+<p>As you have seen we don't have the best code coverage, we are looking to improve this. You can totally help to make the project better by creating new unit tests or functional tests ! This is a good way to learn about the code and contribute to the project.</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2021-04-28 00:00:00+00:00">April 28, 2021</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              8 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="rtkbase-with-partner-ardusimple-kit"><a class="toclink" href="../../2021/04/28/rtkbase-with-partner-ardusimple-kit/">RTKBase with Partner ArduSimple Kit</a></h2>
+<p><img alt="Ardusimple_logo|690x418, 50%" src="https://discuss.ardupilot.org/uploads/default/original/3X/1/9/19dde28fb85233f3b8ad13b8c04bff75625e5c40.png" /> </p>
+<p>Hello friends,</p>
+<p>What is better than a GNSS(Global Navigation Satellite System)/GPS (Global Positioning System) ? 2 GNSS ? No, it is an RTK (Real Time Kinematic) GNSS of course !</p>
+<p>Indeed, if we simplify, classic GNSS units can achieve between 2 and 10m accuracy, when an RTK unit allows it to reach centimeter accuracy.</p>
+<p>But obviously, that is expensive ... You may have noticed that ArduPilot welcomes a new partner that is ArduSimple (https://www.ardusimple.com). They are providing a lot of cost effective RTK ready GNSS boards. And they lend me a <a href="https://www.ardusimple.com/product/simplertk2b-heading-basic-starter-kit-ip67/">RTK Kit</a>. I could have redone their GPS heading tutorial with 2 GNSS (https://www.ardusimple.com/ardupilot-simplertk2bheading-configuration/) but I decided to go another way that is how to make a shareable RTK Base !</p>
+<p>I will be speaking about GNSS as that is the generic term for those sensors. The GPS is the USA satellites constellation, whereas GNSS are now able to use multiple constellations like GLONASS, GALILEO, etc.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2021/04/28/rtkbase-with-partner-ardusimple-kit/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2021-03-22 00:00:00+00:00">March 22, 2021</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              6 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="multi-sitl-on-homecloud"><a class="toclink" href="../../2021/03/22/multi-sitl-on-homecloud/">Multi SITL on homecloud</a></h2>
+<p><img alt="|624x312" src="https://lh5.googleusercontent.com/5LdlQTs-WrYVbwpc8Bsm66c3CWzP-vCRsrjTiuoRdhuWvsQehuguEGFWbnTiideus5ZD-gLorbUQzGBUYAXeIxWSSKlJkelUD8mdUvO-whGyiUhDCqeLjEt2YMioY5tCW7NGZdGs" /></p>
+<p>Hello friends,</p>
+<p>You may remember that some time ago, I made a post about multi robot simulation with ArduPilot (see https://discuss.ardupilot.org/t/multi-systems-patrol-simulations/35740/1).</p>
+<p>This was during my PhD, I didn't have much time nor funds to push my simulation into a cloud system for larger scale simulation.</p>
+<p>Well, that is still not the case! But I got a bunch of small boards that do nothing in my apartment, so I made a small homecloud to make more simulations.</p>
+<p>In this video https://www.youtube.com/watch?v=SMISOREe1y4&amp;list=PL6sCNLbHuYxZVRAbnLY5Xxkr5f4rQeJCJ , which is quite long, I tried to explain how to do it.</p>
+<h3 id="the-demo"><a class="toclink" href="../../2021/03/22/multi-sitl-on-homecloud/#the-demo">The demo</a></h3>
+<p>This is a demonstration of the simplest group behaviour : follow the leader (or wolf-pack). This demo relies on ArduPilot simulator : SITL (Software In The Loop). The simulation uses the same code as the real vehicle with some simulated sensor. This is quite convenient to work on the code and do testing as the transition to the real vehicle will be easier. ArduPilot supports a large set of behaviour, and lucky me, the follow behaviour already got a library, so it is just a matter of enabling it to use it.</p>
+<p>The behaviour is quite simple. We define a leader that will stream its position to the followers. Each follower uses the leader position to calculate its new position.</p>
+<p>On ArduPilot, we can choose who the leader is and the position of the follower relatively to the leader. So, in this demo I made a more complex follow the leader behaviour.</p>
+<p>My master leader is drone 1. Drone 2 to 4 are following drone 1. Drone 10 is following drone 2. Drone 11 to 13 are following drone 10. Drone 20 is following drone 3, drone 21 to 23 are following drone 20, etc.</p>
+<p><img alt="|624x451" src="https://lh4.googleusercontent.com/T75FjNIjdmwxJj13STCzVcahRKbydtRiW7UmN8lZRIe1nEcvw5Bf-_by0vYR01f1fniWVu-ZhvGcU60HlFXNHeHocUd7zFj7CLOXByQ-yvUzBjCKZz98WWbAFMmfwzizCNxNIgt3" /></p>
+<p>The result is what we can see on the video, it is not perfect but it is working.</p>
+<p>As I am using a simulation, I use a multicast protocol to allow each drone to get the information from the other. That is the equivalent to broadcast mode on a RF-radio.</p>
+<p>In order to launch the simulation, I have made a small python script using Pymavlink. Pymavlink is a set of tools to control drones using the MAVLink protocol. That is the main protocol used by open source drone autopilot like ArduPilot. The python script is in charge of putting the drone in Guided mode that is an automatic mode that keeps the drone in position waiting for an order. Then it issues a takeoff when the drone is ready and then setting the Follow mode. Finally, there is a control loop at the end as the follow mode will disengage if the drone to follow goes too far or in case of issue. The control loop is in charge to set it back.</p>
+<p>The drone 1 is using the Python script to stay in Guided mode and got some random target position over the CMAC field that is SITL default position (that is in Australia since ArduPilot mains developers are in Australia).</p>
+<p><img alt="|624x684" src="https://lh3.googleusercontent.com/_TykA9MDq9J2yyBXv-5vTUA_xb8UBoBwVNWEwxgtN-yxJ4isfIE75sgbZZ9NtTMUc1xnIgYEQbCdz_GryH-IKCOAqD5rFhmSaNpb5UPwNBFbiPl8gTjSDpcLxejWJ1ec0V226yyo" /></p>
+<p>Don’t fear my python script, it is quite long but most is useless for this demo. If you look closely you could see that most functions are just copy-paste from the ArduPilot autotest framework (https://ardupilot.org/dev/docs/the-ardupilot-autotest-framework.html).</p>
+<p>This script will be added to the Pymavlink repository as an example on how to use Pymavlink for drone programming.</p>
+<p>I could have used LUA scripting to achieve the same behavior as ArduPilot support. LUA scripting is a scripting language that can be used directly on drones. I am more at ease with Python and want to demonstrate how to use Pymavlink for simple tasks, so no LUA</p>
+<h3 id="homecloud"><a class="toclink" href="../../2021/03/22/multi-sitl-on-homecloud/#homecloud">Homecloud</a></h3>
+<p><img alt="|624x468" src="https://lh6.googleusercontent.com/l9bgqsjPPP4CIjhD63xTvV8I47tUsKRLJjYQUwaFwaP1hWz6ZtvBnAuRn-O8PR8uLgOz3G6DfHKfS5P7pXTCkbpQCld1A-ff7yR8Yz8tXTiM0Z9QVgZz7sunrUzkXUfjcIc2sxWj" /></p>
+<p>My homecloud is composed :</p>
+<ul>
+<li>
+<p>1 raspberry pi 3 : that is 4 cores so 4 vehicles</p>
+</li>
+<li>
+<p>1 odroid C1+ : that is 4 cores so 4 vehicles</p>
+</li>
+<li>
+<p>1 balena fin (RPI3) : that is 4 cores so 4 vehicles</p>
+</li>
+<li>
+<p>1 odroid XU4 : that is 4 cores so 4 vehicles + the GUI</p>
+</li>
+</ul>
+<p>That is pretty conservative, most should be able to use 2 vehicles by core. But I prefer to play it safe with my power consumption and heat management ... those are in my living room, so it isn't nice to have some fans at full speed all day long !</p>
+<h3 id="system-setup"><a class="toclink" href="../../2021/03/22/multi-sitl-on-homecloud/#system-setup">System setup</a></h3>
+<p>I am not a cloud engineer, so I don't really know the best technology to use. I could have set up each board with their own OS, installed docker or Kubernetes and some VPN but that is really a pain to manage on the long term ... So, my choice was set to BalenaCloud.
+Their system is quite simple to set up, support docker and project versioning with Git. Bonus that the same system on all boards, so I code only once for all boards and use git push to update them ! They are also offering a cloud GUI, VPN and a public web address to serve a simple web application. That's what I needed. As I put my homecloud on the public web, even through Balena VPN, I have put it behind an isolation router that puts my homecloud on a separate network than the rest of my home equipments.<img alt="|624x308" src="https://lh3.googleusercontent.com/9lpPCWBhFl_wsETmjftOnp2zdOeFnNiZVy8w6vfYy6m8tkOgJnlg0CeRlObCuES2zwr75NuzS2h0ZB0-jO4enfwTQxFboEb6oX5q44-zlzo-9ugBSYCXHCE6EMWHEtxa-qgb7sYY" /></p>
+<h4 id="simulation-cloud-architecture"><a class="toclink" href="../../2021/03/22/multi-sitl-on-homecloud/#simulation-cloud-architecture">Simulation cloud architecture</a></h4>
+<p>The system will be quite simple :</p>
+<ul>
+<li>Each system will be loaded with BalenaOS and the same docker-compose script to spawn the vehicles.</li>
+</ul>
+<p>I made a launch script to be able to use their website to control the simulation. Basically, it exposes some SITL parameters and an ON/OFF parameters, to be able to stop the vehicle in need.</p>
+<ul>
+<li>
+<p>I made a clean docker image for SITL, as I need to use Python the image is still around 200Mo. That doesn't seem much, but considering that for just SITL the whole docker image is 6,3Mo... it is big. Lightweight docker image is important for simpler and faster deployment (and saves a lot of power on storage and transfer).</p>
+</li>
+<li>
+<p>The GUI : that is a MAVProxy plugin using CesiumJS. MAVProxy is a Python Ground Control Station (GCS) for MAVLink drones. MAVProxy is connected to the multicast port, gets each drone infos and streams them back to the Webbrowser. The web application updates each drone position and displays it.</p>
+</li>
+<li>
+<p>How to handle multiple vehicle connexions to the GCS without doing it one by one ? SITL supports a multicast protocol and most GCS are able to use it ! That means that we only need to set up all vehicles to connect on the same multicast port and the GCS will have all vehicles available ! Unfortunately, the multicast protocol isn't handled well by docker so we need to expose the full network stack to make it work. That isn't an issue for my project as all my boards are on the same network but it could be an issue on a real cloud. A simple solution for this issue could be to use a VPN like Zerotier to make a bridge between the different instances.</p>
+</li>
+<li>
+<p>How to play with the vehicle from the web ? That is where BalenaCloud is nice, and they give a secure link to your instance. The downside is that only http port 80 is enabled. So I bypass this restriction with a proxy to be able to use multiple ports and redirect the connection on port 80 to the right port on the board.</p>
+</li>
+</ul>
+<p>The Docker files for those that want to replicate : https://github.com/khancyr/balena-docker_swarm_follow</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2021-03-04 00:00:00+00:00">March 4, 2021</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="ci-at-ardupilot"><a class="toclink" href="../../2021/03/04/ci-at-ardupilot/">CI at ArduPilot</a></h2>
+<p><img alt="|624x385" src="https://lh3.googleusercontent.com/5m6gmYH7FeWWppRJ6rmT2_2DYIdLXVUpniGeVXZhZIGB85oVCCq3GNa4qaI1PDL56SiH4ZDi4XlcFtVDWJSIRorfQ1gu3Xsigy0Nw4HuQzPPsaR64IfGoPWzk3VmqTy-GziyWXzN" /></p>
+<p>At ArduPilot, we are working hard to improve our contribution flow and testing. You could have seen those last years that our Continuous Integration system was greatly improved. We are now testing building against 19 boards for 4 vehicle types (multicopters, submarines, ground and sea vehicles, plane types) in addition to the simulation testing with around 300 functionals tests and unittest !</p>
+<p>Those allowed us to bring more change into ArduPilot with greater confidence and allowed us to track down bugs before they reach the codebase.</p>
+<p>Nevertheless, working on a large audience open source project can be hard as the code is changing fast and the Pull Requests (code contributions) are often quickly outdated. This brings up two questions : can we still rebase our work on top of the main branch ? How much flash memory the new change will consume ?</p>
+<p>ArduPilot is well optimised for microcontroller boards like STM32 brand, but we need to be careful on our flash requirement as we support boards with a 1MB limit.</p>
+<p>That is why we just made a slight addition to our CI system. We now have a new rule that will try to do the rebase against the main branch for a representative set of boards : one 1MB limited, one STM32F4 based one's, one STM32H7 based one's. And we also do a binary size comparison. This allows us to directly get access to the change in flash consumption on the CI system.</p>
+<p><img alt="|624x311" src="https://lh6.googleusercontent.com/6zUrR2vlUNGQgOVZGX757rXtW6Eysz2sIRMjMNkORWAtsAYAyMAI9_d6a4HCnko4FsDymHmX7c5bKXpllqeqz9guPGGoNUd0Xhtzs61EvYXuE-X1Rhma3ri5r7JF80IgvmG4m7_5" /></p>
+<p>There is still more work to improve our CI and workflow system, if you want to help us, you are welcome to !</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2020-05-25 00:00:00+00:00">May 25, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/various/" class="md-meta__link">Various</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              10 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="open-source-french-drone-identification"><a class="toclink" href="../../2020/05/25/open-source-french-drone-identification/">Open Source French Drone Identification</a></h2>
+<p>Cher·e·s dronistes français, (This news is mostly for french people, you will find <strong>english translation at the end of the post</strong>)</p>
+<p>Vous n'êtes pas sans savoir que l'Arrêté du 27 décembre 2019 définissant les caractéristiques techniques des dispositifs de signalement électronique et lumineux des aéronefs circulant sans personne à bord va rentrer en vigueur prochainement. Cela implique que tous les drones pesant 800 grammes ou plus au décollage doivent être équipés d’un dispositif permettant de signaler électroniquement sa présence.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2020/05/25/open-source-french-drone-identification/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2020-05-01 00:00:00+00:00">May 1, 2020</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="ubuntu-2004-support-on-ardupilot"><a class="toclink" href="../../2020/05/01/ubuntu-2004-support-on-ardupilot/">Ubuntu 20.04 support on ArduPilot</a></h2>
+<p><img alt="font-ecran-officiel-ubuntu-20-04|690x388" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/6/0/60b64acc14413796e47d7ba09f5b1161668fff49_2_690x388.png" /></p>
+<p>Hello guys,</p>
+<p>A small news to announce you that we officially support Ubuntu 20.04 !</p>
+<h4 id="ubuntu-2004-support"><a class="toclink" href="../../2020/05/01/ubuntu-2004-support-on-ardupilot/#ubuntu-2004-support">Ubuntu 20.04 support</a></h4>
+<p>Our installation script (<a href="https://github.com/ArduPilot/ardupilot/blob/master/Tools/environment_install/install-prereqs-ubuntu.sh">install-prereqs-ubuntu.sh</a>) has been heavily clean up and updated for this release without dropping support on old Ubuntu versions. You can also see that more comments and versatility have been added to be able to understand what it does and setup only the things you need. The default behavior isn't changed and will install everything. We also fix some minor configuration issues, and you should see some compilation speed up for STM target like CubeBlack or Pixhawk1 since the ccache configuration has been corrected (see my previous blog post for brief explanations https://discuss.ardupilot.org/t/speeding-up-compilation/52551)</p>
+<p>This version won't bring anything new for ArduPilot. But you must be aware that Python2 was dropped as default python interpreter. Thus, Python3 is the default on 20.04. Hopefully, most of our tools are working on Python3, so you won't notice it.</p>
+<h4 id="docker-improvements"><a class="toclink" href="../../2020/05/01/ubuntu-2004-support-on-ardupilot/#docker-improvements">Docker improvements</a></h4>
+<p>On other news, we have updated the docker image for development we provide for faster and simpler development.
+The image has been update to allow you to build all the firmware from Docker and use SITL. By default the graphic environment isn't installed to reduce the docker container size to the bare minimal (or close to).<br />
+You can find the instruction on how to use the docker image here : https://ardupilot.org/dev/docs/building-setup-linux.html#id1 . If you want to use only SITL for cloud stuff or swarming with docker, please use the multi-stage image building. SITL binaries only have libc as dependency allowing you to have a minimal sized container for SITL testing ! I will show you some examples next week.</p>
+<p>The docker workflow works like that :
+- You build a base image on Ubuntu 18.04 (we will migrating when 20.04 will be fully tested) with all our development tools installed. You can see in the <a href="https://github.com/ArduPilot/ardupilot/blob/master/Dockerfile">Dockerfile</a> some new environment variables :</p>
+<p>SKIP_AP_EXT_ENV=1 SKIP_AP_GRAPHIC_ENV=1 SKIP_AP_COV_ENV=1 SKIP_AP_GIT_CHECK=1</p>
+<p>Those are passed to our <a href="https://github.com/ArduPilot/ardupilot/blob/master/Tools/environment_install/install-prereqs-ubuntu.sh">install-prereqs-ubuntu.sh</a> to skip installation of some packages like GUI stuff and coverage. You can still modify the variable to install them.</p>
+<ul>
+<li>You launch the image and mount the ArduPilot git directory in the container. This allows you to have a clean image and share the same directory between your computer and the container. It also allows to be  able to get back the built binary out of the docker  container as you won't be able to flash your board directly from docker  (I may be wrong, if a docker master wants you show use how to do it, please comments !).</li>
+<li>From the docker container, you can use all waf commands and tools like sim_vehicle.py. As said previously, you don't have GUI inside this docker image so Mavproxy won't have Map and Console modules for example.</li>
+</ul>
+<h4 id="completion-improvements"><a class="toclink" href="../../2020/05/01/ubuntu-2004-support-on-ardupilot/#completion-improvements">Completion improvements</a></h4>
+<p>Another improvement  is the installation of our Bash completion system on the installation. This  allow  you to use TAB key to have  suggestion of commands on tools like waf and sim_vehicle.py. for those that already have setup their environment, you can still look into the install script how to setup the completion, or check my blog post about completion <a href="https://discuss.ardupilot.org/t/shell-completion-for-tools/49432">here</a>. By default we only install completion for Bash, for Zsh user please check the blog post or <a href="https://github.com/ArduPilot/ardupilot/blob/master/Tools/completion/completion.md">Tools/completion/completion.md</a> for instructions.</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2019-11-20 00:00:00+00:00">November 20, 2019</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="shell-completion-for-tools"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/">Shell completion for Tools</a></h2>
+<p>https://youtu.be/UpY7SZ6FXi8
+Hello friends,</p>
+<p>What has always bother me on ArduPilot development was the lack of completion on the tools we used.
+Our command-line commands can be quite long and memorizing them when we aren't using them every day could be a pain.</p>
+<p>To reduce this pain and allow newcomers to have some more help, I have made some shell completion for <code>waf</code> and <code>sim_vehicle.py</code>.
+For those that don't know what it is, the completion system allows you type the start of a word or command and let the system complete it, by double press <code>TAB</code> key ! When you use a terminal that is a very convenient feature, plenty of software have some completion.</p>
+<p>The completion scripts are now in master branch, but they should appear on 4.x series on each vehicle soon. Otherwise, I will make some documentation to put the scripts on the system to allow completion to work on each branch.</p>
+<p>I made completion for two shell : Bash and Zsh. Most users should be on Bash, as it is the default shell on Debian like system (like Ubuntu).</p>
+<h3 id="on-bash"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#on-bash">on Bash</a></h3>
+<p>To install the completion, you should either, source the main script on your current terminal or source the main script on your bash configuration.</p>
+<h4 id="direct-use"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#direct-use">Direct use</a></h4>
+<p>From ArduPilot root directory, simply use :
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>./Tools/completion/completion.bash
+</code></pre></div>
+And now completion works from your terminal instance. If you close the terminal, the completion feature is removed.</p>
+<h4 id="permanent-use"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#permanent-use">Permanent use</a></h4>
+<p>Edit you <code>.bashrc</code> file, it is on your Home directory but it is a hidden file (CTRL+H on Ubuntu to reveal them). Then put at the end of the file :
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>PATH_TO_ARDUPILOT_DIRECTORY/Tools/completion/completion.bash
+</code></pre></div>
+where PATH_TO_ARDUPILOT_DIRECTORY is the path to ArduPilot directory (simple :crazy_face:)</p>
+<h4 id="usage"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#usage">Usage</a></h4>
+<p>You can now abuse of your TAB key on <code>waf</code> and <code>sim_vehicle.py</code> call ! See the video at the end.</p>
+<h3 id="on-zsh"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#on-zsh">On ZSH</a></h3>
+<p>Zsh don't allow live loading of completion. So you have to source the completion script in your <code>.zshrc</code> file. Like for Bash, you will find it hiding on your home !
+Put at the end of the file :
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>PATH_TO_ARDUPILOT_DIRECTORY/Tools/completion/completion.zsh
+</code></pre></div>
+where PATH_TO_ARDUPILOT_DIRECTORY is the path to ArduPilot directory (simple :crazy_face:). Notice the difference, the extension is <code>.zsh</code> !</p>
+<h3 id="video"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#video">Video</a></h3>
+<p>I have made a simple video to show usage of completion :
+<a href="https://youtu.be/UpY7SZ6FXi8">https://youtu.be/UpY7SZ6FXi8</a></p>
+<h3 id="future-improvements"><a class="toclink" href="../../2019/11/20/shell-completion-for-tools/#future-improvements">Future improvements</a></h3>
+<p>I am not a command-line wizard so I tried my best to get a maintainable completion feature. Not all features are available yet, but most used one's are implemented. If some magician knows how to make the completion faster/better, feel free to submit a PR !</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2018-11-30 00:00:00+00:00">November 30, 2018</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/ardupilot/" class="md-meta__link">ArduPilot</a>, 
+              <a href="../../category/ros/" class="md-meta__link">ROS</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="multi-systems-patrol-simulations"><a class="toclink" href="../../2018/11/30/multi-systems-patrol-simulations/">Multi systems patrol simulations</a></h2>
+<p>https://www.youtube.com/watch?v=YLDb-ti9bjU</p>
+<p>Hello everyone,</p>
+<p>I am often asked about what can be done with ArduPilot or with ROS, and my answers are always : you can do just about anything you&rsquo;d like to do! ArduPilot is not just an autopilot for drones, it is also a well-grown robotic platform ! It is not the same as ROS, in the sense that ROS concentrates more on the high level tasks, whereas ArduPilot focuses on low-level vehicles control ! Both have strengths and drawbacks. And by using both, you will be able to create incredible robots !</p>
+<p>During my PhD, I tried to focus my work on multi-robots systems, which are also known as swarms (from an academic perspective, swarms are just a special case of multi-robots systems). ROS by itself can excel for single robot design, but is difficult to use on multi-robots systems and flying robots like multi-rotors. On the other hand, ArduPilot allows to use multi-rotors more simply, and with safe behaviors.</p>
+<p>In order to demonstrate the usefulness of multi-robots systems and be able to evaluate the global performance of the system, I set up some identical simulations with ROS and ArduPilot. The goal was to demonstrate the performance of a multi-robot system with various numbers of quadcopters, and rovers on patrolling tasks. I then simulated systems with 1 to 20 quadcopters, and 1 to 20 rovers and system with the same number of quadcopters and rovers. Those were simulated with SITL from ArduPilot, and I will detail at the end the few modifications that I made and that I am pushing into ArduPilot. The patrolling task was done with ROS. Each vehicle got a Mavros instance (that is, a ROS program that makes the bridge between ROS language and MAVLink), a simple python script that handles the patrolling behavior, and a master python script that controls the group. But that was too simple ! So I implemented 3 patrolling behavior, that are quite simple :</p>
+<ul>
+<li>
+<p>Random patrol (RANDOM). It is a decentralized algorithm. Each robot will go at a random patrolling point</p>
+</li>
+<li>
+<p>Reactive patrol (HIGHEST). It is a centralized algorithm. When a robot arrived at his destination, it notifies the master script (like a base) and gets the next patrol point.</p>
+</li>
+<li>
+<p>Cyclique patrol (CYCLE). It is a decentralized algorithms. At start, each robot create a patrol cycle.</p>
+</li>
+</ul>
+<p>For the full detail of the simulation models and hypothesis, please refer to my PhD manuscript and/or directly the code !</p>
+<p><img alt="image|690x193" src="https://discuss.ardupilot.org/uploads/default/original/3X/7/f/7f6e8d780f79dd35e9bfdbfc830967083d06852f.png" /></p>
+<p>The results were those graphs for 1 hour of patrolling on this field, the number represent the patrol points :
+<img alt="image|402x500" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/2/1/21fade3ab0c93fea3f89d03ffe6bcb9a8c08dd2d_2_402x500.jpeg" /></p>
+<p>For copter only:</p>
+<p><img alt="image|499x500" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/7/0/701cccb86de5a799d2d06c287fb84f9cc6ed3245_2_499x500.png" /></p>
+<p>For rover only:</p>
+<p><img alt="image|507x499" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/7/1/71e947ffc6552f11867b4823da3c434b3fcc2289_2_507x499.png" /></p>
+<p>For rover and copter :</p>
+<p><img alt="image|690x419" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/8/1/814f5aad12d84236e7ced766feb8e155d949a5ed_2_690x419.png" />
+<img alt="image|690x330" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/3/e/3e87e7e6f83ac69ac14bcefd96e91558ca8c97ef_2_690x330.png" /></p>
+<p>All on same graphs :
+<img alt="image|494x500" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/b/2/b2f4fc4657d48e3e39bf0d1807bc3461ec1ad886_2_494x500.png" />
+<img alt="image|523x500" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/2/2/2200753e38b10e9ce57e3b199d39c5b2480ca47c_2_523x500.png" />
+<img alt="image|524x500" src="https://discuss.ardupilot.org/uploads/default/optimized/3X/7/b/7bfba5a6873b6628fd2a1ef6f17159ccb9d58832_2_524x500.png" /></p>
+<p>You can see a video here of the patrolling : https://www.youtube.com/watch?v=YLDb-ti9bjU</p>
+<p>I won't discuss the results here, but you should be worried by SKYNET ^^ as the group behavior outperform largely the single robot patrolling ! But what it was really interesting, it is that I could make all those simulation on my own laptop : just a i5 + 8go RAM and with simulation accelerated 10 times ! Right ! (If I find the budget to build 20 quads and 20 rovers, I would be able to confirm the simulation with the real platform)</p>
+<p>ArduPilot allows to simulate entire fleets of robots with the same code that will be embedded and at a small cost ! That is right, for those kind of behavior, you don't need to use big simulator like Gazebo on big 32 cores servers. Simulate simply with SITL !</p>
+<p>I don't say that you should use Gazebo or other well known robotic simulator, but when it comes to simulate only behavior without worrying about collision, SITL with excel !</p>
+<p>All these were permitted thanks to OPEN SOURCE and numerous contributions ! PR welcome !</p>
+<p>F.A.Q</p>
+<p>Where is your code :</p>
+<p>Github ardupilot https://github.com/ArduPilot/ardupilot and branch PhD on my fork https://github.com/khancyr/ardupilot/tree/PHD : I am currently getting back those changes into ardupilot master.</p>
+<p>Modifications done :
+- allow to set sysid at the start of SITL (PR in master)</p>
+<ul>
+<li>
+<p>disable mavlink routing on a channel. Finally I didn&rsquo;t use this, this was intend to prevent mavlink spam on a broadcast channel for the monitor. I still believe that we need a way to stop mavlink routing explicitly on some channel, as on swarm configuration, there is to much spam.</p>
+</li>
+<li>
+<p>clear battery failsafe : I didn&rsquo;t use this, I got another code that I will push to allow to refill the battery and clear the failsafe. On my code, the ROS part is monitoring the battery and decide when to go on base to change the battery.</p>
+</li>
+<li>
+<p>disable MSG_POSITION_TARGET_GLOBAL_INT sending, as there is a bug in MAVROS. It has been reported and I need to make a fix on MAVROS.</p>
+</li>
+<li>
+<p>Disable some stream and unused features. This won&rsquo;t be push back on master.</p>
+</li>
+<li>
+<p>Prevent switching in guided is EKF is not ready for Rover. (Need a PR)</p>
+</li>
+<li>
+<p>disarm rover at the end of RTL : I am not sure we want this into master, maybe with a parameter.</p>
+</li>
+<li>
+<p>correct battery estimation for rover : PR done.</p>
+</li>
+</ul>
+<p>ROS :</p>
+<p>https://github.com/khancyr/patrol</p>
+<p>I want to do the same with Gazebo :</p>
+<p>If you need only a 3d visualization see https://github.com/khancyr/gazebo_ardu . This can be adapted to any 3D framework you want.</p>
+<p>To use the gazebo plugin : https://github.com/khancyr/ardupilot_gazebo . Beware, the simulation of rover isn't simple yet as the ground contacts are a pain and the friction gives a hard time to make a skid steering rover.</p>
+<p>Why use ArduPilot over PX4:</p>
+<p>PX4 don't support rover and surface vehile like boat and sub. Moreover, the governance of ArduPilot is open whereas PX4 is <strike> money </strike> dronecode driven</p>
+<p>I don't understand anything but the colors were nice :</p>
+<p>Thanks you.</p>
+    
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  <a class="md-pagination__link" href="../../">1</a> <a class="md-pagination__link" href="../2/">2</a> <span class="md-pagination__current">3</span>
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2025 Pierre Kancir
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/pierre-kancir/" target="_blank" rel="noopener" title="Pierre on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/khancyr" target="_blank" rel="noopener" title="Pierre on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@MrKhancyr" target="_blank" rel="noopener" title="Pierre on Youtube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://khancyr.github.io/feed_rss_created.xml" target="_blank" rel="noopener" title="Pierre&#39;s blog on RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../js/goatcounter.js"></script>
+      
+    
+  </body>
+</html>

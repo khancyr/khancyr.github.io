@@ -1,0 +1,1500 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://khancyr.github.io/blog/2024/01/21/mastering-fcu-connectivity-a-guide-to-secure-and-efficient-setup-on-ubuntudebian-systems/">
+      
+      
+        <link rel="prev" href="../../20/easa-launches-groundbreaking-survey-for-drone-manufacturers-in-the-eu/">
+      
+      
+        <link rel="next" href="../../../08/27/boost-your-drones-iq-with-dual-autopilot-systems-using-ardupilot/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../../../images/Hivebotics-blue.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems - Pierre Kancir personal blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems - Pierre Kancir personal blog" />
+<meta property="og:image" content="https://khancyr.github.io/assets/images/social/blog/2024/01/21/mastering-fcu-connectivity-a-guide-to-secure-and-efficient-setup-on-ubuntudebian-systems.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://khancyr.github.io/blog/2024/01/21/mastering-fcu-connectivity-a-guide-to-secure-and-efficient-setup-on-ubuntudebian-systems/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems - Pierre Kancir personal blog" />
+<meta property="twitter:image" content="https://khancyr.github.io/assets/images/social/blog/2024/01/21/mastering-fcu-connectivity-a-guide-to-secure-and-efficient-setup-on-ubuntudebian-systems.png" />
+</head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-connect-fcu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Pierre Kancir personal blog" class="md-header__button md-logo" aria-label="Pierre Kancir personal blog" data-md-component="logo">
+      
+  <img src="../../../../../images/favicon-32x32.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pierre Kancir personal blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Pierre Kancir personal blog" class="md-nav__button md-logo" aria-label="Pierre Kancir personal blog" data-md-component="logo">
+      
+  <img src="../../../../../images/favicon-32x32.png" alt="logo">
+
+    </a>
+    Pierre Kancir personal blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    June 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    June 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    August 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    September 2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    July 2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    May 2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    November 2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ardupilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArduPilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/iot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/various/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Various
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bad-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bad example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#good-enough-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Good enough solution:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting by id
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connecting by id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-access-those" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to access those ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-if-we-got-2-fcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What if we got 2 FCU ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UDEV
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDEV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-put-in-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to put in it ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-the-cube-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What about the Cube rules ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#but-how-to-know-exactly-where-the-fcu-you-want-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        But how to know exactly where the FCU you want is?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-trigger-udev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to trigger udev
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion-smarter-fcu-connectivity-for-the-win" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion: Smarter FCU Connectivity for the Win!
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/khancyr.png" alt="Pierre Kancir">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Pierre Kancir
+                        
+                      </strong>
+                      <br>
+                      MasterMind Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-01-21 00:00:00+00:00" class="md-ellipsis">January 21, 2024</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2024-01-21 00:00:00+00:00" class="md-ellipsis">January 21, 2024</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/ardupilot/">ArduPilot</a>, 
+                              <a href="../../../../category/various/">Various</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../../../tags/#tag:linux" class="md-tag">Linux</a>
+      
+    
+  </nav>
+
+
+
+<p><img alt="|602x344" src="https://lh7-us.googleusercontent.com/76JbSSvZ5jrXEaUFaNnxKB3N5QXBBm0bumCzMbsV_RIS-259fN8tGBiGNzBiD0kFRokzKSMdlPjD9qvGMMTJD-8Nt_75f5BUlZ7EQ_fSrWFjrswYxOnC6XZWOcUmfQudXBkb5hrmV8HXGiXHzZ6P5LI" /></p>
+<h1 id="how-to-connect-fcu">How to connect FCU</h1>
+<p>From reading community posts, and even some partners, one recurring issue is how to connect the FCU (Flight Control Unit aka the autopilot) correctly ?</p>
+<p>Let’s dive into some examples on how to do it properly on Ubuntu/Debian like computers.</p>
+<!-- more -->
+<h2 id="bad-example">Bad example</h2>
+<p>First one is the one to ban ! I won’t even mention working as a root user to use a serial port for obvious reasons.</p>
+<pre><code>sudo chmod 777 /dev/ttyACM0
+</code></pre>
+<p>What does this mean : You are enforcing full write, read, executing permission for all users on <code>/dev/ttyACM0</code>. So anybody on your system would be able to take control of it. So in terms of security this isn’t great. And you don’t know what is on <code>ttyACM0</code>, it could be your FCU or another serial device.</p>
+<p>Moreover, it suffers from 2 big drawbacks that is the source of complains : permission is resettled on reboot ! So you will need to run the command again.</p>
+<p>And as you don’t know what is on <code>ttyACM0</code>, if you reboot your FCU, it will move to <code>ttyACM1</code> (or bigger number) and you will need to run the command against these new ports.</p>
+<p>Those are two sources of complaint and we will see how to solve them !</p>
+<h2 id="good-enough-solution">Good enough solution:</h2>
+<p>First and easier solution : use the proper user group !</p>
+<pre><code>sudo usermod -a -G dialout $USER
+</code></pre>
+<p>The <strong>dialout</strong> group is given permission to access serial ports, and by adding the user to this group, it allows the user to communicate with serial devices without needing to be the superuser. This needs to logout and log in back to take effect.</p>
+<p>With this simple command you don’t have to worry about <code>chmod 777</code> any ports for your user nor about reboot issue : your user gains permanent access to the serial ports !</p>
+<p>That will solve some frustration, but doesn’t address the <code>ttyACMx</code> targeting issue ! How to know where the FCU is ?  </p>
+<h2 id="connecting-by-id">Connecting by id</h2>
+<p>Let’s consider two cases :
+-   your FCU is on an UART port, so its address is fixed.
+-   your FCU is on an USB port or goes through a serial adapter, so it suffers from the port name “issue”.</p>
+<p>In the first case, you shouldn’t have an issue as the UART port address will always be the same address. For example, on Raspberry Pi, the first UART is always <code>/dev/ttyAMA0</code>. Easy case, if the FCU reboot, it will still be at the same address. If the computer is rebooted, the FCU will always be there ! But remember, only one process can control a serial port, this means for example that you cannot use both Mavproxy and Mavros to use <code>/dev/ttyAMA0</code> at the same time. Only one will be able to access the port at a time.</p>
+<p>For the second case, the easiest way is to benefit from USB descriptors ! When you connect a USB device to a computer, the device sends a series of descriptors to the host to describe its characteristics, capabilities, and other important details.</p>
+<h3 id="how-to-access-those">How to access those ?</h3>
+<p>Easiest command : <code>lsusb</code></p>
+<pre><code>╭─khancyr@MAN-LP-0101 ~
+╰─$ lsusb
+
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+Bus 001 Device 003: ID 2dae:1016 Hex/ProfiCNC CubeOrange
+</code></pre>
+<p>So this shows us what is on our USB ports and the description of the devices ! In my case, I got 2 USB hubs, a CubeOrange and a CP210x UART Bridge.</p>
+<p>Let’s look more at the Cube. We can see that it is on the first USB bus, and is device 3. It got some IDs <code>2dae</code> and <code>1016</code>. Those are called Vendor ID (VID) : <code>2dae</code> is CubePilot vendor ID. And <code>1016</code> is the Product ID (PID) of the CubeOrange !</p>
+<p>It would be very convenient if we can use that information to connect ! And we can !</p>
+<pre><code>khancyr@MAN-LP-0101:~ $ ls /dev/serial/by-id/
+usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_02AB8FCD-if00-port0
+usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if00
+usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if02
+</code></pre>
+<p>Magic ! The Cube is there ! So we can access it with a new path : <code>/dev/serial/by-id/usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if00</code></p>
+<p>Instead of <code>/dev/ttyACMx</code> . As this is using the USB descriptors to create a path, it doesn’t rely on the OS to assign a port number like for the <code>ttyACMx</code>, and you have the guarantee to always find your FCU on this pass. Quite convenient ! One drawback is that the <code>4A0035000E51313132383631</code> in the path is an unique id. So you need to know it to write your connection string. If your software support it, you can use <code>*</code> in the path to not have to explicitly look of it : <code>/dev/serial/by-id/usb-Hex_ProfiCNC_CubeOrange_*-if00</code></p>
+<p><strong>What about -if00 and -if02 ?</strong></p>
+<p>On the CubeOrange, you have 2 USB connections : <code>serial0</code> and <code>serial6</code>. So that explains the two id’s you can see.</p>
+<p>Of course, all this isn’t only for Cubes ! It works for all devices using USB ports like FCU, camera, serial adapters etc.</p>
+<h2 id="what-if-we-got-2-fcu">What if we got 2 FCU ?</h2>
+<pre><code>╭─khancyr@MAN-LP-0101 ~
+╰─$ lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+Bus 001 Device 003: ID 2dae:1016 Hex/ProfiCNC CubeOrange
+Bus 001 Device 004: ID 2dae:1016 Hex/ProfiCNC CubeOrange
+
+khancyr@MAN-LP-0101:~ $ ls /dev/serial/by-id/
+usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_02AB8FCD-if00-port0
+usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if00
+usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if02
+usb-Hex_ProfiCNC_CubeOrange_4D0030000D51313132383631-if00
+usb-Hex_ProfiCNC_CubeOrange_4D0030000D51313132383631-if02
+</code></pre>
+<p>So we got 2 different IDs using the unique identifier. So it is still working but it doesn’t make identification easier as the IDs are similar and using <code>*</code> won’t help anymore.</p>
+<h2 id="udev">UDEV</h2>
+<p>UDEV is a device manager for the Linux kernel that dynamically manages device nodes in the /dev directory. That is what creates <code>/dev/ttyACMx</code> and the <code>/dev/serial</code> paths for example. It can set rules defined in configuration files to determine how devices should be handled.</p>
+<p>There we need the USB VID and PID to identify correctly the device we want to handle. Udev rules can be written in numerous ways, you can search on the net how to do it. We will see some examples.</p>
+<p>First, we need to create a file with a special naming :</p>
+<pre><code>90-ardupilot-udev.rules
+</code></pre>
+<p>And we will place it in <code>/etc/udev/rules.d/</code> . You can probably see that this directory already has some other rules. So the file naming should be a <code>.rules</code> extension. Then you must know that the files are used in alphabetic order ! Therefore they generally all start with a number to have easier sorting. In our case, we want a low priority rule so 90 is good.</p>
+<h3 id="what-to-put-in-it">What to put in it ?</h3>
+<p>The syntax can be quite complex but easy for simple tasks. Here is our example content :</p>
+<pre><code># CP210X USB UART
+ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+
+# FT231XS USB UART
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+
+# Prolific Technology, Inc. PL2303 Serial Port
+ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+
+# QinHeng Electronics HL-340 USB-Serial adapter
+ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+
+# Cube
+ACTION=="add", KERNEL=="ttyACM*", ATTRS{idVendor}=="2dae", ATTRS{idProduct}=="1016", ENV{ID_USB_INTERFACE_NUM}=="00", MODE:="0666", SYMLINK+="CUBE-$env{ID_SERIAL_SHORT}", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1", ENV{MTP_NO_PROBE}="1"
+</code></pre>
+<p>Let’s analyze this. The first 4 rules are for TTL-USB adapters. They set the <code>0666</code> permission on the device. To identify the adapters, we are looking at idVendor (VID) and idProduct (PID). Pretty simple, right ?</p>
+<p>What about <code>ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"</code> ? Those have special meaning for those that want to use a cellular modem (4G/5G) and use the software <code>ModemManager</code> . They prevent ModemManager from looking at those ports as cellular modem to prevent any resource conflict. If you have used MAVProxy, you may have seen this warning:  </p>
+<pre><code>WARNING: You should uninstall ModemManager as it conflicts with APM and Pixhawk
+</code></pre>
+<p>Those options prevent issues !</p>
+<h3 id="what-about-the-cube-rules">What about the Cube rules ?</h3>
+<pre><code>ACTION=="add", KERNEL=="ttyACM*", ATTRS{idVendor}=="2dae", ATTRS{idProduct}=="1016", ENV{ID_USB_INTERFACE_NUM}=="00", MODE:="0666", SYMLINK+="CUBE-$env{ID_SERIAL_SHORT}", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1", ENV{MTP_NO_PROBE}="1"
+</code></pre>
+<p>This is the same as for serial adapters : Identify a cube is added on usb .</p>
+<p>This looks for a Cube when an USB device is added, if it finds one with VID+PID and interface "00", set <code>0666</code> permission, prevent ModemManager and MTP conflict. Lastly, it creates a new symlink (a reference to another file/directory) and calls it CUBE-XXXXX, with XXXXXthe CUBE serial number.</p>
+<p><code>ENV{MTP_NO_PROBE}="1"</code> This prevents the OS from trying to mount the CUBE as an MTP "Media Transfer Protocol” device. Common use cases for MTP include connecting a smartphone to a computer to transfer photos, videos, and music, or connecting a digital camera to a computer for file transfer.</p>
+<p>So if you connect a CUBE, udev will create a new port : /dev/CUBE-1234. If you plug a second one, /dev/CUBE-2345. That is the same behavior that for /dev/ttyACMx , but with easier name and consistant</p>
+<p>That is pretty convenient as it makes finding your FCU way simpler ! If you have different types of FCU, you can put the name you like to find them, and not have to look at each ttyACMx device which is the one you need !</p>
+<p>Another solution would be to count the number of Cube present and assign them a number, unfortunately udev don't handle this very well, so it some times doesn't work ...</p>
+<pre><code>ACTION=="add", KERNEL=="ttyACM*", ATTRS{idVendor}=="2dae", ATTRS{idProduct}=="1016", ENV{ID_USB_INTERFACE_NUM}=="00", MODE:="0666", PROGRAM="/bin/sh -c 'expr $(ls /dev/CUBE* 2&gt;/dev/null | wc -l) + 1'", SYMLINK+="CUBE%c",  ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1", ENV{MTP_NO_PROBE}="1"
+</code></pre>
+<h3 id="but-how-to-know-exactly-where-the-fcu-you-want-is">But how to know exactly where the FCU you want is?</h3>
+<p>The problem with 2 Cubes is that the first to boot will have the name CUBE-1234 and the second CUBE-2345, so you have to know the Cube serial number to know where it is.</p>
+<p>We can change our rules for this, to use the USB hub position as rule to set the name. Let’s change our symlink rule for this one :</p>
+<pre><code>ACTION=="add", KERNEL=="ttyACM*", ATTRS{idVendor}=="2dae", ATTRS{idProduct}=="1017", ATTRS{devpath}=="1.1", ENV{ID_USB_INTERFACE_NUM}=="00", MODE:="0666", SYMLINK+="CUBE1", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1", ENV{MTP_NO_PROBE}="1"
+ACTION=="add", KERNEL=="ttyACM*", ATTRS{idVendor}=="2dae", ATTRS{idProduct}=="1017", ATTRS{devpath}=="1.2", ENV{ID_USB_INTERFACE_NUM}=="00", MODE:="0666", SYMLINK+="CUBE2", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1", ENV{MTP_NO_PROBE}="1"
+</code></pre>
+<p>So here we filter with a new rule : devpath that is the usb hub place. This set the Cube in first usb position as CUBE1 and the Cube at second usb position as CUBE2. Quite conveniant, isn't it ?</p>
+<p>How to find this devpath ? There are probably numerous ways. One is to use udev tools to get the usb descriptors !</p>
+<pre><code>udevadm info --attribute-walk --name=/dev/serial/by-id/usb-Hex_ProfiCNC_CubeOrange_4A0035000E51313132383631-if00
+</code></pre>
+<p>Udevadm info starts with the device specified by the devpath and then walks up the chain of parent devices. It prints for every device found, all possible attributes in the udev rules key format. Looking at the output, we will found something like :</p>
+<pre><code>udevadm info --attribute-walk --name=/dev/serial/by-id/usb-Hex_ProfiCNC_CubeOrange_4D0030000D5131313238
+3631-if00
+SELinux enabled state cached to: disabled
+
+Udevadm info starts with the device specified by the devpath and then
+walks up the chain of parent devices. It prints for every device
+found, all possible attributes in the udev rules key format.
+A rule to match, can be composed by the attributes of the device
+and the attributes from one single parent device.
+
+looking at device '/devices/platform/scb/fe9c0000.xhci/usb1/1-1/1-1.3/1-1.3.3/1-1.3.3:1.0/tty/ttyACM4':
+    KERNEL=="ttyACM4"
+    SUBSYSTEM=="tty"
+    DRIVER==""
+    ATTR{power/control}=="auto"
+    ATTR{power/runtime_active_time}=="0"
+    ATTR{power/runtime_status}=="unsupported"
+    ATTR{power/runtime_suspended_time}=="0"
+
+looking at parent device '/devices/platform/scb/fe9c0000.xhci/usb1/1-1/1-1.3/1-1.3.3/1-1.3.3:1.0':
+    KERNELS=="1-1.3.3:1.0"
+    SUBSYSTEMS=="usb"
+    DRIVERS=="cdc_acm"
+    ATTRS{authorized}=="1"
+    ATTRS{bAlternateSetting}==" 0"
+    ATTRS{bInterfaceClass}=="02"
+    ATTRS{bInterfaceNumber}=="00"
+    ATTRS{bInterfaceProtocol}=="01"
+    ATTRS{bInterfaceSubClass}=="02"
+    ATTRS{bNumEndpoints}=="01"
+    ATTRS{bmCapabilities}=="2"
+    ATTRS{iad_bFirstInterface}=="00"
+    ATTRS{iad_bFunctionClass}=="02"
+    ATTRS{iad_bFunctionProtocol}=="01"
+    ATTRS{iad_bFunctionSubClass}=="02"
+    ATTRS{iad_bInterfaceCount}=="02"
+    ATTRS{supports_autosuspend}=="1"
+
+looking at parent device '/devices/platform/scb/fe9c0000.xhci/usb1/1-1/1-1.3/1-1.3.3':
+    KERNELS=="1-1.3.3"
+    SUBSYSTEMS=="usb"
+    DRIVERS=="usb"
+    ATTRS{authorized}=="1"
+    ATTRS{avoid_reset_quirk}=="0"
+    ATTRS{bConfigurationValue}=="1"
+    ATTRS{bDeviceClass}=="ef"
+    ATTRS{bDeviceProtocol}=="01"
+    ATTRS{bDeviceSubClass}=="02"
+    ATTRS{bMaxPacketSize0}=="64"
+    ATTRS{bMaxPower}=="100mA"
+    ATTRS{bNumConfigurations}=="1"
+    ATTRS{bNumInterfaces}==" 4"
+    ATTRS{bcdDevice}=="0200"
+    ATTRS{bmAttributes}=="c0"
+    ATTRS{busnum}=="1"
+    ATTRS{configuration}==""
+    ATTRS{devnum}=="21"
+    ATTRS{devpath}=="1.3.3"
+    ATTRS{devspec}=="(null)"
+    ATTRS{idProduct}=="1016"
+    ATTRS{idVendor}=="2dae"
+    ATTRS{ltm_capable}=="no"
+    ATTRS{manufacturer}=="Hex/ProfiCNC"
+    ATTRS{maxchild}=="0"
+    ATTRS{power/active_duration}=="1388444"
+    ATTRS{power/autosuspend}=="2"
+    ATTRS{power/autosuspend_delay_ms}=="2000"
+    ATTRS{power/connected_duration}=="1388440"
+    ATTRS{power/control}=="on"
+    ATTRS{power/level}=="on"
+    ATTRS{power/persist}=="1"
+    ATTRS{power/runtime_active_time}=="1388266"
+    ATTRS{power/runtime_status}=="active"
+    ATTRS{power/runtime_suspended_time}=="0"
+    ATTRS{product}=="CubeOrange"
+    ATTRS{quirks}=="0x0"
+    ATTRS{removable}=="fixed"
+    ATTRS{rx_lanes}=="1"
+    ATTRS{serial}=="4D0030000D51313132383631"
+    ATTRS{speed}=="12"
+    ATTRS{tx_lanes}=="1"
+    ATTRS{urbnum}=="14"
+    ATTRS{version}==" 2.00"
+</code></pre>
+<p>So now you got the exact position on the usb hub, you can use this information to set the right name on each device you got.</p>
+<h2 id="how-to-trigger-udev">How to trigger udev</h2>
+<p>After writing your rules, you can trigger udev with :</p>
+<pre><code>sudo udevadm control --reload-rules &amp;&amp; sudo udevadm trigger -c add
+</code></pre>
+<p>If you didn't use the ACTION=="add", you can remove  <code>-c add</code> to trigger the new rules.</p>
+<h2 id="conclusion-smarter-fcu-connectivity-for-the-win">Conclusion: Smarter FCU Connectivity for the Win!</h2>
+<p>And there you have it, folks – a guide to connecting your FCU in a smart, secure, and hassle-free way. Let's sum it up:
+1.  <strong>Ditch the Bad Habits</strong>: Say a big no to <code>sudo chmod 777</code>! It's like leaving your front door wide open. Instead, be savvy about permissions and security.</p>
+<ol>
+<li>
+<p><strong>User Group Magic</strong>: Just remember, <code>dialout</code> is your new best friend. By adding your user to the <code>dialout</code> group, you're setting up a connection that won’t vanish after a reboot. It's like a trusty old friend – always there when you need it.</p>
+</li>
+<li>
+<p><strong>Descriptor Detective Work</strong>: When it comes to tackling the <code>ttyACMx</code> mystery, using USB descriptors is like being a detective. You get to pinpoint your FCU. No more guessing games every time you plug in a device.</p>
+</li>
+<li>
+<p><strong>Multiple FCUs? No Problem!</strong>: Got a fleet of FCUs? Udev rules are like custom remote id  for each one. You'll never mix up your devices again.</p>
+</li>
+<li>
+<p><strong>Udev Rules to the Rescue</strong>: Udev rules are not just lines of code; they're your toolkit for a tailor-made setup. With them, you can banish conflicts with pesky programs like ModemManager and keep everything running smoothly.</p>
+</li>
+</ol>
+<p>In short, connecting your FCU shouldn’t feel like rocket science. With these tips and tricks, you'll be navigating the Linux terminal like a pro, and your FCU will be up and running in no time. So go on, give these methods a try, and take control of your FCU connectivity like a boss! Happy flying!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2025 Pierre Kancir
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/pierre-kancir/" target="_blank" rel="noopener" title="Pierre on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/khancyr" target="_blank" rel="noopener" title="Pierre on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@MrKhancyr" target="_blank" rel="noopener" title="Pierre on Youtube" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://khancyr.github.io/feed_rss_created.xml" target="_blank" rel="noopener" title="Pierre&#39;s blog on RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../js/goatcounter.js"></script>
+      
+    
+  </body>
+</html>
