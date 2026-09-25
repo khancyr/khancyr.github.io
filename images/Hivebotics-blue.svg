@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="62cm" height="47cm" viewBox="403 224 1231 928" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Arrière-plan">
+    <g transform="matrix(0.5,0,0,0.5,7.99361e-13,-1.77636e-14)">
+      <polygon style="fill: none; stroke-opacity: 1; stroke-width: 100; stroke: #2d4f6c" points="1186.52,548.502 1578.94,548.502 1840.56,962.047 1578.94,1375.59 1186.52,1375.59 924.9,962.047 "/>
+      <polygon style="fill: none; stroke-opacity: 1; stroke-width: 100; stroke: #2d4f6c" points="1186.52,1375.83 1578.94,1375.83 1840.56,1789.37 1578.94,2202.92 1186.52,2202.92 924.9,1789.37 "/>
+      <polygon style="fill: none; stroke-opacity: 1; stroke-width: 100; stroke: #2d4f6c" points="1840.66,962.002 2233.08,962.002 2494.7,1375.55 2233.08,1789.09 1840.66,1789.09 1579.04,1375.55 "/>
+      <polygon style="fill: none; stroke-opacity: 1; stroke-width: 100; stroke: #2d4f6c" points="2494.54,548.502 2886.96,548.502 3148.58,962.047 2886.96,1375.59 2494.54,1375.59 2232.92,962.047 "/>
+      <polygon style="fill: none; stroke-opacity: 1; stroke-width: 100; stroke: #2d4f6c" points="2494.54,1375.83 2886.96,1375.83 3148.58,1789.37 2886.96,2202.92 2494.54,2202.92 2232.92,1789.37 "/>
+    </g>
+  </g>
+</svg>
