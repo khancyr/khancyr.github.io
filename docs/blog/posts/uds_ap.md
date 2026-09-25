@@ -10,7 +10,10 @@ tags:
     - SITL
 authors:
   - khancyr
+image: images/uds_ap.png
 ---
+
+![TCP port collisions vs one Unix Domain Socket per SITL directory](images/uds_ap.png)
 
 ArduPilot simulation is simple and complex at the same time, since we support a lot of features.
 We obviously allow testing all the vehicle types we support, but what is less known is that we can simulate different sensors, such as GNSS, compass or eAHRS, with their real protocol AND their physical bus: SPI, I2C, UART, CAN. That's right, we have a virtual CAN bus, but also I2C and SPI simulation!

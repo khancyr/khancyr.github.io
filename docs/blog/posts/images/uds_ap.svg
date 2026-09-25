@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e9e5b"/></marker>
+    <marker id="bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/></marker>
+  </defs>
+  <rect width="1200" height="630" fill="#101820"/>
+
+  <!-- title -->
+  <text x="600" y="68" fill="#ffffff" font-size="40" font-weight="bold" text-anchor="middle">ArduPilot SITL: Unix Domain Sockets</text>
+  <text x="600" y="106" fill="#9fb3c8" font-size="22" text-anchor="middle">Fewer ports to juggle, more simulations side by side</text>
+  <line x1="600" y1="140" x2="600" y2="590" stroke="#2a3a4a" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- LEFT: TCP -->
+  <text x="300" y="170" fill="#d9534f" font-size="28" font-weight="bold" text-anchor="middle">TCP on localhost</text>
+  <g font-size="20" fill="#ffffff" text-anchor="middle">
+    <rect x="50" y="210" width="150" height="56" rx="10" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/><text x="125" y="245">SITL -I0</text>
+    <rect x="50" y="300" width="150" height="56" rx="10" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/><text x="125" y="335">SITL -I1</text>
+    <rect x="50" y="390" width="150" height="56" rx="10" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/><text x="125" y="425">SITL -I1</text>
+    <rect x="50" y="480" width="150" height="56" rx="10" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/><text x="125" y="515">other app</text>
+  </g>
+  <g font-size="20" font-family="DejaVu Sans Mono, monospace" text-anchor="middle">
+    <rect x="390" y="235" width="150" height="50" rx="25" fill="#26394a" stroke="#d9534f" stroke-width="3"/><text x="465" y="267" fill="#ffffff">:5760</text>
+    <rect x="390" y="345" width="150" height="50" rx="25" fill="#26394a" stroke="#d9534f" stroke-width="3"/><text x="465" y="377" fill="#ffffff">:5770</text>
+  </g>
+  <g fill="none" stroke-width="3">
+    <path d="M200,238 C290,238 300,260 388,260" stroke="#2e9e5b" marker-end="url(#ok)"/>
+    <path d="M200,328 C290,328 300,370 388,370" stroke="#2e9e5b" marker-end="url(#ok)"/>
+    <path d="M200,418 C290,418 300,370 388,370" stroke="#d9534f" marker-end="url(#bad)"/>
+    <path d="M200,508 C300,508 280,265 388,262" stroke="#d9534f" stroke-dasharray="6 6" marker-end="url(#bad)"/>
+  </g>
+  <g stroke="#d9534f" stroke-width="6" stroke-linecap="round">
+    <line x1="555" y1="242" x2="583" y2="278"/><line x1="583" y1="242" x2="555" y2="278"/>
+    <line x1="555" y1="352" x2="583" y2="388"/><line x1="583" y1="352" x2="555" y2="388"/>
+  </g>
+  <text x="300" y="580" fill="#d9534f" font-size="22" text-anchor="middle" font-family="DejaVu Sans Mono, monospace">bind: Address already in use</text>
+
+  <!-- RIGHT: UDS -->
+  <text x="900" y="170" fill="#2e9e5b" font-size="28" font-weight="bold" text-anchor="middle">Unix Domain Socket</text>
+  <g font-size="18" text-anchor="start">
+    <!-- folder 1 -->
+    <path d="M650,210 h70 l14,14 h416 v96 h-500 z" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/>
+    <text x="664" y="246" fill="#9fb3c8" font-family="DejaVu Sans Mono, monospace">sim1/</text>
+    <rect x="664" y="260" width="120" height="44" rx="8" fill="#26394a"/><text x="724" y="289" fill="#ffffff" text-anchor="middle">SITL</text>
+    <text x="820" y="289" fill="#2e9e5b" font-family="DejaVu Sans Mono, monospace">APM-UDS-serial0</text>
+    <line x1="786" y1="282" x2="814" y2="282" stroke="#2e9e5b" stroke-width="3"/>
+    <!-- folder 2 -->
+    <path d="M650,340 h70 l14,14 h416 v96 h-500 z" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/>
+    <text x="664" y="376" fill="#9fb3c8" font-family="DejaVu Sans Mono, monospace">sim2/</text>
+    <rect x="664" y="390" width="120" height="44" rx="8" fill="#26394a"/><text x="724" y="419" fill="#ffffff" text-anchor="middle">SITL</text>
+    <text x="820" y="419" fill="#2e9e5b" font-family="DejaVu Sans Mono, monospace">APM-UDS-serial0</text>
+    <line x1="786" y1="412" x2="814" y2="412" stroke="#2e9e5b" stroke-width="3"/>
+    <!-- folder 3 -->
+    <path d="M650,470 h70 l14,14 h416 v96 h-500 z" fill="#1f2d3a" stroke="#4a6378" stroke-width="2"/>
+    <text x="664" y="506" fill="#9fb3c8" font-family="DejaVu Sans Mono, monospace">sim3/</text>
+    <rect x="664" y="520" width="120" height="44" rx="8" fill="#26394a"/><text x="724" y="549" fill="#ffffff" text-anchor="middle">SITL</text>
+    <text x="820" y="549" fill="#2e9e5b" font-family="DejaVu Sans Mono, monospace">APM-UDS-serial0</text>
+    <line x1="786" y1="542" x2="814" y2="542" stroke="#2e9e5b" stroke-width="3"/>
+  </g>
+  <g fill="#2e9e5b" font-size="30" font-weight="bold" text-anchor="middle">
+    <text x="1115" y="292">✓</text><text x="1115" y="422">✓</text><text x="1115" y="552">✓</text>
+  </g>
+</svg>
