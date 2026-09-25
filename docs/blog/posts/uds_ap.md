@@ -35,7 +35,7 @@ A Unix Domain Socket (UDS, or `AF_UNIX`) is an inter-process communication endpo
 Like the IP world, there are two main flavours:
 
 - `SOCK_STREAM`: a connected byte stream, the equivalent of TCP. ArduPilot uses it for the serial ports.
-- `SOCK_DGRAM`: message-based, roughly equivalent to UDP. Unlike UDP, Unix datagram sockets preserve message boundaries, which is useful for the simulated RC input.
+- `SOCK_DGRAM`: message-based, roughly equivalent to UDP. Unlike UDP, Unix datagram sockets is ordered, no silent packet loss under load, which is useful for the simulated RC input.
 
 ### Why it can be better than TCP on localhost for ArduPilot ?
 
@@ -49,7 +49,6 @@ With UDS, the endpoint is a file in the SITL working directory. Two SITL instanc
 
 - Access is controlled by filesystem permissions, and the socket is never reachable from the network.
 - In Docker, you share the socket by bind mounting the directory, no port publishing needed.
-- No `TIME_WAIT` issue when restarting SITL quickly on the same port.
 
 Of course, there are some limits:
 
