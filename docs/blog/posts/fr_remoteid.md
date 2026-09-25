@@ -1,5 +1,6 @@
 ---
 title: "Open Source French Drone Identification"
+description: "An open source ESP32 implementation of the French electronic drone identification (signalement électronique)."
 date:
   created: 2020-05-25
   updated: 2020-05-25

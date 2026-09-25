@@ -1,5 +1,6 @@
 ---
 title: "A New Vision for ArduPilot.org: Insights from Our Latest Analytics"
+description: "What the new analytics on ardupilot.org and the wiki tell us about our visitors, and how we plan to improve their experience."
 date:
   created: 2023-10-13
   updated: 2023-10-13

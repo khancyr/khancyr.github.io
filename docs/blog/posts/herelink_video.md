@@ -1,5 +1,6 @@
 ---
 title: Integrated remote controller video sharing (Herelink, Siyi, etc.)
+description: "Sharing video from integrated remote controllers like Herelink and Siyi, and the pitfalls the documentation doesn't mention."
 date:
   created: 2025-02-07
   updated: 2025-02-07

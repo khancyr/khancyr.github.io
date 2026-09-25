@@ -1,5 +1,6 @@
 ---
 title: "How I caught an LLM-powered recruiter with a prompt injection on LinkedIn"
+description: "Using a prompt injection hidden in my LinkedIn profile to catch recruiters who send LLM-generated messages."
 date:
   created: 2026-03-15
   updated: 2026-03-15
@@ -9,7 +10,7 @@ categories:
 tags:
     - AI
     - security
-image: image/Linkedin_injection1.png
+image: https://khancyr.github.io/blog/images/Linkedin_injection1.png
 authors:
   - khancyr
 ---

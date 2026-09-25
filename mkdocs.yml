@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: Pierre Kancir personal blog
 site_url: https://khancyr.github.io
+site_description: Pierre Kancir's blog on ArduPilot, drones, robotics and open source.
 theme:
   language: en
   name: material
@@ -9,9 +10,13 @@ theme:
 
   features:
     - navigation.instant
+    - navigation.top
     - search.suggest
+    - content.code.copy
   palette:
     scheme: slate
+hooks:
+  - hooks/social_image.py
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
@@ -62,4 +67,4 @@ extra:
       name: Pierre's blog on RSS
       link: https://khancyr.github.io/feed_rss_created.xml
 
-copyright: Copyright &copy; 2016 - 2025 Pierre Kancir
+copyright: Copyright &copy; 2016 - 2026 Pierre Kancir

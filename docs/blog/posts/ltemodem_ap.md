@@ -1,5 +1,6 @@
 ---
 title: "Pushing the Boundaries: Ethernet and LTE for ArduPilot"
+description: "ArduPilot now supports Ethernet and LTE modems for telemetry, beyond classic serial radios."
 date:
   created: 2025-06-07
   updated: 2025-06-07
@@ -7,7 +8,7 @@ draft: false
 categories:
     - ArduPilot
     - IoT
-image: images/putin_lte.jpg
+image: https://khancyr.github.io/blog/images/putin_lte.jpg
 authors:
   - khancyr
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Multi systems patrol simulations"
+description: "Multi-robot patrol simulations with ArduPilot and ROS."
 date:
   created: 2018-11-30
   updated: 2018-11-30

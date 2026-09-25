@@ -1,5 +1,6 @@
 ---
 title: "Customizing SITL Multicopter Simulations: Tailoring Realism to Your Drone"
+description: "Tune SITL multicopter frame parameters to make the simulation match your real drone."
 date:
   created: 2023-08-25
   updated: 2023-08-25

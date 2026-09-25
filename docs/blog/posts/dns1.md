@@ -1,5 +1,6 @@
 ---
 title: "My Online Privacy Is Worth 20 ms"
+description: "Moving my home network off US DNS providers with AdGuard Home, Tailscale and UniFi firewall rules, and what I learned on the way."
 date:
   created: 2026-06-29
   updated: 2026-06-29
@@ -9,7 +10,7 @@ categories:
 tags:
     - DNS
     - security
-image: images/adguard.png
+image: https://khancyr.github.io/blog/images/adguard.png
 authors:
   - khancyr
 ---

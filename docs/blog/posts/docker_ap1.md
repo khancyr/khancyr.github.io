@@ -1,5 +1,6 @@
 ---
 title: "ArduPilot and Docker Part 1"
+description: "An introduction to running ArduPilot SITL inside Docker containers."
 date:
   created: 2022-09-06
   updated: 2022-09-06

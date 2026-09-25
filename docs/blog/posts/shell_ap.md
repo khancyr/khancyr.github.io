@@ -1,5 +1,6 @@
 ---
 title: "Shell completion for Tools"
+description: "Shell tab completion for ArduPilot developer tools like waf and sim_vehicle.py."
 date:
   created: 2019-11-20
   updated: 2019-11-20

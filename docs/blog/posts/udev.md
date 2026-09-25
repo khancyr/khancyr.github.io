@@ -1,5 +1,6 @@
 ---
 title: "Mastering FCU Connectivity: A Guide to Secure and Efficient Setup on Ubuntu/Debian Systems"
+description: "Connect a flight controller reliably and securely on Ubuntu/Debian with udev rules and proper permissions."
 date:
   created: 2024-01-21
   updated: 2024-01-21

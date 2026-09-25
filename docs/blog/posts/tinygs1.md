@@ -1,5 +1,6 @@
 ---
 title: "TinyGS: Getting Back to Listening"
+description: "Turning an old ESP32 LoRa board into a TinyGS ground station to receive satellite signals."
 date:
   created: 2026-04-22
   updated: 2026-04-22

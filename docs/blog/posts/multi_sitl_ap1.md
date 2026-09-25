@@ -1,5 +1,6 @@
 ---
 title: "Multi SITL on homecloud"
+description: "Running a swarm of ArduPilot SITL instances on a homemade cluster of small boards."
 date:
   created: 2021-03-22
   updated: 2021-03-22

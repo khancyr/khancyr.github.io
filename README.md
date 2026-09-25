@@ -17,10 +17,12 @@ This repository hosts the source for Pierre Kancir’s personal blog site, built
 ## Setup (recommended)
 
 ```bash
-cd /home/pierre/Workspace/khancyr.github.io
 python -m venv .venv
 source .venv/bin/activate
+pip install mkdocs-material "mkdocs-material[imaging]" mkdocs-rss-plugin
 ```
+
+The social cards (`[imaging]`) also need the Cairo system library, e.g. `sudo apt install libcairo2`.
 
 ## Running locally
 
@@ -46,6 +48,7 @@ The generated site will be in `site/`.
 ```yaml
 ---
 title: "My post title"
+description: "One sentence shown in link previews and search results."
 date:
   created: 2026-03-15
   updated: 2026-03-15
@@ -59,7 +62,8 @@ authors:
 ---
 ```
 
-3. Write your content below the frontmatter.
+3. Optional: `image: https://khancyr.github.io/blog/images/<file>` (absolute URL, file in `docs/blog/posts/images/`) replaces the generated social card in link previews and the RSS feed.
+4. Write your content below the frontmatter.
 
 ## Deploying
 

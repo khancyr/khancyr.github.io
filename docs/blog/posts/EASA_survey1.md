@@ -1,5 +1,6 @@
 ---
 title: "EASA Launches Groundbreaking Survey for Drone Manufacturers in the EU "
+description: "EASA launches its first survey of EU drone manufacturers, and why manufacturers should take part."
 date:
   created: 2024-01-20
   updated: 2024-01-20

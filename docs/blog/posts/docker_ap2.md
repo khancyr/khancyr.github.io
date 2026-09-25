@@ -1,5 +1,6 @@
 ---
 title: "ArduPilot and Docker Part 2"
+description: "Building small and fast Docker images for ArduPilot SITL."
 date:
   created: 2023-03-23
   updated: 2023-03-23

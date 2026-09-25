@@ -1,5 +1,6 @@
 ---
 title: A Journey to fix a bug
+description: "Tracking down why Mission Planner stopped working with the Centipède NTRIP caster, from symptom to fix."
 date:
   created: 2023-09-18
   updated: 2023-09-18

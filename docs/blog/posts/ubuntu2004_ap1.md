@@ -1,5 +1,6 @@
 ---
 title: "Ubuntu 20.04 support on ArduPilot"
+description: "ArduPilot now officially supports Ubuntu 20.04, with a cleaned-up install-prereqs script."
 date:
   created: 2020-05-01
   updated: 2020-05-01

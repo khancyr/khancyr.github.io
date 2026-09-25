@@ -1,5 +1,6 @@
 ---
 title: Boost Your Drone’s IQ with Dual Autopilot Systems Using ArduPilot
+description: "Fly with two ArduPilot autopilots on one vehicle, for redundancy or to safely test new code."
 date:
   created: 2024-08-27
   updated: 2024-08-27

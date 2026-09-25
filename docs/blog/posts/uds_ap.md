@@ -1,5 +1,6 @@
 ---
 title: "ArduPilot SITL: UDS support"
+description: "ArduPilot SITL can now use Unix Domain Sockets instead of TCP: no port juggling when running many simulations in parallel."
 date:
   created: 2026-09-25
   updated: 2026-09-25
@@ -10,7 +11,7 @@ tags:
     - SITL
 authors:
   - khancyr
-image: images/uds_ap.png
+image: https://khancyr.github.io/blog/images/uds_ap.png
 ---
 
 ![TCP port collisions vs one Unix Domain Socket per SITL directory](images/uds_ap.png)

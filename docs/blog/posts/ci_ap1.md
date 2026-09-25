@@ -1,5 +1,6 @@
 ---
 title: "CI at ArduPilot"
+description: "How ArduPilot's CI now checks rebases and flash size changes on every Pull Request."
 date:
   created: 2021-03-04
   updated: 2021-03-04

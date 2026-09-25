@@ -1,5 +1,6 @@
 ---
 title: "Speeding up compilation"
+description: "Tips to speed up ArduPilot compilation on a modest laptop."
 date:
   created: 2021-07-07
   updated: 2021-07-07

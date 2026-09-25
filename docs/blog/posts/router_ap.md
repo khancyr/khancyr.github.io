@@ -1,5 +1,6 @@
 ---
 title: "MAVLink routing with a Router software"
+description: "Routing MAVLink between an autopilot and companion computer software with MAVProxy and dedicated router software."
 date:
   created: 2022-02-20
   updated: 2022-02-20

@@ -1,5 +1,6 @@
 ---
 title: "JUnit Output support in Autotest Framework"
+description: "ArduPilot's autotest framework can now output JUnit reports, and what that means for CI and contributors."
 date:
   created: 2023-11-23
   updated: 2023-11-23

@@ -1,5 +1,6 @@
 ---
 title: "Creating an RSS Feed from ArduPilot Discuss Forum Topics"
+description: "A quick way to create an RSS feed for any topic on the ArduPilot Discuss forum."
 date:
   created: 2023-07-25
   updated: 2023-07-25

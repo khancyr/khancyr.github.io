@@ -1,5 +1,6 @@
 ---
 title: RTKBase with Partner ArduSimple Kit
+description: "Build an RTK GNSS base station with an ArduSimple kit for centimeter-level accuracy."
 date:
   created: 2021-04-28
   updated: 2021-04-28

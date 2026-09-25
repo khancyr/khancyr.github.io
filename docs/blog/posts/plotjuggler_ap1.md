@@ -1,5 +1,6 @@
 ---
 title: "Plotjuggler Dataflash plotting!"
+description: "Plot ArduPilot Dataflash logs with PlotJuggler, an alternative to MAVExplorer and Mission Planner."
 date:
   created: 2021-07-07
   updated: 2021-07-07

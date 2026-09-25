@@ -1,5 +1,6 @@
 ---
 title: "Learning ADS-B Technology: A DIY Guide"
+description: "What ADS-B is, why drones use it, and how to build a cheap DIY receiver to learn the technology."
 date:
   created: 2023-09-11
   updated: 2023-09-11

@@ -1,5 +1,6 @@
 ---
 title: "ArduPilot Code Coverage"
+description: "What code coverage is and how ArduPilot now measures which parts of the code our tests actually exercise."
 date:
   created: 2021-06-07
   updated: 2021-06-07
